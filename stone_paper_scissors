@@ -1,0 +1,38 @@
+import random
+lis=['stone','paper','scissor']
+
+def game_rules():
+    your_score=0
+    computer_score=0
+    if player==computer:
+            print("Tie!")
+    elif player=="stone":
+        if computer=="paper":
+            print("You lose!")
+        else:
+            print("You win!")
+    elif player=="paper":
+        if computer=="scissor":
+            print("You lose!")
+        else:
+            print("You win!")
+    elif player=="scissor":
+        if computer=="stone":
+            print("You lose!")
+        else:
+            print("You win!")
+    else:
+        print("That's not a valid play. Check your spelling!!!")
+
+choice=True
+while (choice):
+    player=input("Enter your choice: stone,paper,scissor:  ")
+    computer=random.choice(lis)
+    print("computer chooses: ",computer)
+    game_rules()
+    
+    c=input("Do you want to continue?(y/n): ")
+    if c=="n":
+        choice=False
+        
+ #scoreboard with increment till one reaches value 5 to be incorporated
